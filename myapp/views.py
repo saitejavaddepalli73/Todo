@@ -56,8 +56,8 @@ def userlogin(request):
 
 
 def insertData(request):
-    print(request.user.id)
-    print(request.user)
+    # print(request.user.id)
+    # print(request.user)
     content = request.POST.get('content')
     cont = Description(user=request.user, content=content)
     cont.save()
