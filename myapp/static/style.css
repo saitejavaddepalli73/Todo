@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'poppins',sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #332941;
+    /* display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center; */
+}
+
+.card{
+    height: 600px;
+    width: 600px;
+    background-color: #F8E559;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card form{
+    display: inline-block;
+}
+
+.card form input{
+    height: 50px;
+    width: 300px;
+    background: #7FC7D9;
+    color: #fff;
+    border: #332941 solid 1.5px;
+    outline: none;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin: 20px 0 20px 0px;
+    caret-color: #332941;
+}
+
+.card form input:focus{
+    color: #332941;
+}
+
+.card form input::placeholder{
+    color: rgba(0, 0, 0, 0.484);
+    margin-left: 10px;
+}
+
+.card form button{
+    height: 49px;
+    width: 60px;
+    background-color: #864AF9;
+    outline: none;
+    border: #332941 solid 1px;
+    border-radius: 2rem;
+}
+
+.card form button:hover{
+    background-color: #b59be5;
+}
+
+.content-table{
+    width: 90%;
+    margin-top: 10px;
+    border-collapse: collapse;
+    margin-left: 25px;
+    table-layout: fixed;
+}
+
+
+.content-table th{
+    height: 40px;
+    /* border-right: #332941 solid 1px; */
+    /* margin-right: 10px; */
+    text-align: left;
+    background-color:rgb(0, 235, 157);
+    padding-left: 10px; 
+}
+
+.content-table td{
+    font-size: 14px;
+    font-weight: 530;
+    padding-left: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+
+/* .content-table td:nth-last-of-type(even) {
+    background-color: #f3f3f3;
+} */
+
+/* #but-update{
+    padding: 4px, 10px;
+} */
+
+.content-table tr td #but-update{
+    font-size: 13px;
+    color: black;
+    width: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 10px;
+    border-radius: 0.7rem;
+    outline: none;
+    border: 1px solid #332941;
+    background-color: rgb(35, 233, 81);
+}
+
+.content-table tr td #but-update:hover{
+    background: rgb(132, 223, 153);
+}
+
+.content-table tr td #but-delete{
+    width: 70px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 0.7rem;
+    outline: none;
+    border: 1px solid #332941;
+    background-color: red;
+}
+
+.content-table tr td #but-delete:hover{
+    background: rgb(255, 183, 183);
+}
+
+.container-1{
+    height: 600px;
+    width: 600px;
+    background: #ffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2rem;
+    padding: 35px;
+}
+
+.container-2{
+    height: 500px;
+    width: 500px;
+    background: #ffff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 2rem;
+    padding: 35px;
+}
+
+.form-group{
+    padding-top: 10px;
+}

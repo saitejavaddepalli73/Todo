@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div class="container">
+      <div class="card" style="overflow: auto;">
+        <br><br>
+        <center><u style="color: #332941;"><h1 style="color: #332941;">Your Todo</h1></u></center> 
+        <a href="{% url 'logout'%}">logout</a>
+        <form action="{% url 'insert' %}" method="post">
+          {% csrf_token %}
+          <input type="text" placeholder="Enter your todo here.. " name="content">
+          <button type="submit">Add</button>
+        </form>
+        <table class="content-table">
+          <tr>
+            <!-- <th>SrNo</th> -->
+            <th>Task</th>
+            <th>Status</th>
+            <th>Update/Delete</th>
+          </tr>
+          {% if key1 %}
+          {% for i in key1 %}
+          <tr>
+            <!-- <td><input type="checkbox"></td> -->
+            {% if i.status == True %}
+            <td><s>{{i.content}}</s></td>
+            <td>Completed</td>
+            {% else %}
+            <td>{{i.content}}</td>
+            <td>In progress</td>
+            {% endif %}
+            <td>
+              <a href="{% url 'update' pk=i.id %}"><button id="but-update">Finished</button></a>
+              <a href="{% url 'delete' pk=i.id %}"><button id="but-delete">Delete</button></a>
+            </td>
+          </tr>
+          {% endfor %}
+          {% endif %}
+          <!-- <tr>
+            <td><input type="checkbox"></td>
+            <td>Running</td>
+            <td><button id="but-update">Update</button> <button id="but-delete">Delete</button></td>
+          </tr> -->
+        </table>
+      </div>
+    </div>
+</body>
+</html>
