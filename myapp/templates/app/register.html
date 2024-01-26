@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <link rel="shortcut icon" href="#">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +18,7 @@
 <body>
     <div class="container-1">
         <center><h2>Register Page</h2></center>
+        <center><h5 style="color: red;">{{msg}}</h5></center>
         <form method="post" action="{% url 'registerpage' %}">
             {% csrf_token %}
             <!-- <div class="form-group">
@@ -51,6 +53,7 @@
             <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
         </form>
     </div>
+    <div class="copyright">Copyright © Saiteja Vaddepalli </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 

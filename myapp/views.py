@@ -27,7 +27,7 @@ def registerUser(request):
         user = User.objects.filter(username=username)
         if user:
             message = "User already exists"
-            return render(request,"app/login.html",{'msg':message})
+            return render(request,"app/register.html",{'msg':message})
         else:
             if password == cpassword:
                 newuser = User.objects.create_user(username=username,email=email,password=password)
@@ -38,11 +38,10 @@ def userlogin(request):
     if request.method=="POST":
         username = request.POST['username']
         password = request.POST['password']
-        print(username,password)
         user_profile = User.objects.get(username=username)
 
         user = authenticate(request,username=username, password=password)
-        print(user)
+        
         if user is not None:
             # request.session['fname'] = user.firstname
             # request.session['lname'] = user.lastname

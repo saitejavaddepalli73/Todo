@@ -136,8 +136,8 @@ body{
 }
 
 .container-1{
-    height: 600px;
-    width: 600px;
+    height: 500px;
+    width: 500px;
     background: #ffff;
     position: absolute;
     left: 50%;
@@ -161,4 +161,17 @@ body{
 
 .form-group{
     padding-top: 10px;
+}
+
+.copyright{
+    width: 100%;
+    height: 30px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 63, 63);
+    color: white;
+    bottom: 0;
+    position: absolute;
 }
